@@ -791,8 +791,8 @@ function handleResize() {
   .style("top", figureMarginTop + "px");
   
   svg
-    .attr("width", document.getElementById('figure1').clientWidth)
-    //.attr("height", document.getElementById('figure1').clientWidth);
+    .attr("width", document.getElementById('figure-gw').clientWidth)
+    //.attr("height", document.getElementById('figure-gw').clientWidth);
     .attr("height", figureHeight);
     
   // 3. tell scrollama to update new element dimensions
