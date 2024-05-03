@@ -809,7 +809,7 @@ function init() {
 	// 3. bind scrollama event handlers (this can be chained like below)
 	scroller
 		.setup({
-			step: "#scrolly article .step",
+			step: "#scrolly-gw #d3-article-gw .step",
 			progress: true,
 			//debug: true,
 			offset: 0.35,
