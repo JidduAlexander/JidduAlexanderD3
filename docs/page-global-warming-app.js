@@ -645,10 +645,10 @@ function transAnomaliesUp2(transition, duration, delay, speedUp) {
 
 
 // using d3 for convenience
-var scrolly = d3.select("#scrolly");
-var article = scrolly.select("article");
+var scrolly = d3.select("#scrolly-gw");
+var article = scrolly.select("#d3-article-gw");
 var step    = article.selectAll(".step");
-var figure  = scrolly.select("figure");
+var figure  = scrolly.select("#figure-gw");
 
 // initialize the scrollama
 var scroller = scrollama();
