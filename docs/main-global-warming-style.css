@@ -1,0 +1,94 @@
+/* START FILE: d3-global-warming-style.css */
+
+#intro-gw {
+  height: 100vh;
+}
+#intro-gw-1 {
+  height:40%;
+  max-width:600px;
+  margin:auto;
+  padding-top:4%;
+}
+#intro-gw-2 {
+  height:30%;
+}
+#intro-gw-3 {
+  height:30%;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* These scroll and bounces should be in main CSS
+.scroll {
+  margin-top:5px;
+  text-align:center;
+}
+
+.scroll-down {
+  margin:0 auto 0;
+}
+
+@keyframes bounce {
+  0%   { transform: scale(1,1) translateY(0); }
+  20%  { transform: scale(1,1) translateY(0); }
+  30%  { transform: scale(1,1.05) translateY(3px); }
+  40%  { transform: scale(1,1) translateY(0); }
+  100% { transform: scale(1,1) translateY(0); }
+}
+
+.bounce {
+  animation-name: bounce;
+  animation-delay: 1s;
+  animation-timing-function: ease-in-out;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+.scroll p {
+  margin-bottom:0;
+  color:#444444;
+}
+*/
+
+#scrolly-gw {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* border: 1px dashed darkred; */
+  /* background-color: #f3f3f3; */
+  padding: 1rem;
+}
+
+#scrolly-gw > * {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+#d3-article-gw {
+  position: relative;
+  padding: 0 1rem;
+  max-width: 40%;
+}
+
+#d3-article-gw .step {
+  max-width: 420px; /* Max width for the text */
+  margin-left:auto;
+  margin-right:0;
+  color: #3b3b3b; 
+}
+
+#figure-gw {
+  position: -webkit-sticky;
+  position: sticky;
+  width: 100%;
+  margin: 0;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  z-index: 0;
+}
+
+/* END FILE: d3-global-warming-styles.css */
