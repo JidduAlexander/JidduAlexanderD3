@@ -1,5 +1,5 @@
 
-const svgPortfolioNta = d3.select('#svg-portfolio-Nta')
+const svgPortfolioNta = d3.select('#svg-portfolio-nta')
   .attr("viewBox","8.5 -6 69 52");
 
 const pathsNta = [
