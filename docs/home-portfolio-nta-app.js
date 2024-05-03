@@ -3,10 +3,10 @@ const svgPortfolioNta = d3.select('#svg-portfolio-nta')
   .attr("viewBox","8.5 -6 69 52");
 
 const pathsNta = [
-  svgPortfolioTa.append('g').append('path'),
-  svgPortfolioTa.append('g').append('path'),
-  svgPortfolioTa.append('g').append('path'),
-  svgPortfolioTa.append('g').append('path')
+  svgPortfolioNta.append('g').append('path'),
+  svgPortfolioNta.append('g').append('path'),
+  svgPortfolioNta.append('g').append('path'),
+  svgPortfolioNta.append('g').append('path')
 ];
   
 function lineNta(x, y, curve) {
