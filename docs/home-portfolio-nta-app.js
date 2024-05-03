@@ -23,28 +23,28 @@ configNta = [
   {id: 'br1_4', cr1: 251, cg1: 128, cb1: 114, cr2: 188, cg2: 128, cb2: 189, cr3: 121, cg3: 170, cb3: 204, cr4: 201, cg4: 186, cb4: 218 }];
 
 pathsNta[3]
-  .datum(dataPortfolioNte1_1)
+  .datum(dataNtaPortfolio1_1)
   .attr("d", lineNta("x1", "y1"))
   .attr("stroke", "rgb(98, 98, 98)")
   .attr("stroke-width", 0.15)
   .attr("fill", "rgb(" + configNta[0].cr1 + ", " + configNta[0].cg1 + ", " + configNta[0].cb1 + ")");
 
 pathsNta[2]
-  .datum(dataPortfolioNte1_2)
+  .datum(dataNtaPortfolio1_2)
   .attr("d", lineNta("x1", "y1"))
   .attr("stroke", "rgb(98, 98, 98)")
   .attr("stroke-width", 0.15)
   .attr("fill", "rgb(" + configNta[1].cr1 + ", " + configNta[1].cg1 + ", " + configNta[1].cb1 + ")");
 
 pathsNta[1]
-  .datum(dataPortfolioNte1_3)
+  .datum(dataNtaPortfolio1_3)
   .attr("d", lineNta("x1", "y1"))
   .attr("stroke", "rgb(98, 98, 98)")
   .attr("stroke-width", 0.15)
   .attr("fill", "rgb(" + configNta[2].cr1 + ", " + configNta[2].cg1 + ", " + configNta[2].cb1 + ")");
 
 pathsNta[0]
-  .datum(dataPortfolioNte1_4)
+  .datum(dataNtaPortfolio1_4)
   .attr("d", lineNta("x1", "y1"))
   .attr("stroke", "rgb(98, 98, 98)")
   .attr("stroke-width", 0.15)
