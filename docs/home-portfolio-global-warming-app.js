@@ -1,6 +1,6 @@
 
-var viewBoxYmin = Math.floor(d3.min(dataAnomalies.map((d) => d.y0)))
-var viewBoxYmax = Math.ceil(d3.max(dataAnomalies.map((d) => d.y0)))
+var viewBoxYmin = Math.floor(d3.min(dataGwPortfolioAnomalies.map((d) => d.y0)))
+var viewBoxYmax = Math.ceil(d3.max(dataGwPortfolioAnomalies.map((d) => d.y0)))
 
 const svgPortfolioGw = d3.select('#svg-portfolio-gw')
   .attr("viewBox","10 " + viewBoxYmin + " 80 " + (viewBoxYmax - viewBoxYmin))
