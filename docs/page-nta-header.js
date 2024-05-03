@@ -529,94 +529,6 @@ async function runTransitionQueu() {
   
   isTransitioning = false;
 }
-
-
-
-
-
-function handleStepProgressOriginal(response) {
-  
-  responseCurrent = response;
-  responsePreviousStep = responsePrevious.index + responsePrevious.progress;
-  responseCurrentStep  = responseCurrent.index + responseCurrent.progress;
-
-  var transitionsResponse;
-  var direction;
-  
-  if (responsePrevious.index == -1) {
-    // Initially any scroll is considered to go down, in case the page is loaded in the middle and someone scrolls up
-    direction = 'down';
-  } else {
-    direction = responseCurrent.direction;
-  }
-  
-	if (direction === 'down') {
-	  transitionsResponse = transitionsDown
-	    .filter((row) => row.step >= responsePreviousStep)
-	    .filter((row) => row.step <  responseCurrentStep);
-	} else if (direction === 'up') {
-	  transitionsResponse = transitionsUp
-	    .filter((row) => row.step <= responsePreviousStep)
-	    .filter((row) => row.step >  responseCurrentStep);
-	}
-
-
-
-	responsePrevious = response;
-	
-	if (transitionsResponse.length >= 1) {
-	  
-	  // If many items are in the transition queu than divide the duration and delay
-	  
-	  
-	  var nSteps  = [...new Set(transitionsResponse.map((d) => Math.round(d.step)) )].length;
-	  var nPushes = [...new Set(transitionQueue.map((d) => Math.round(d.nthPush)) )].length;
-	  
-	  //console.log('ns:' + nSteps)
-	  //console.log('np:' + nPushes)
-	  
-	  var transitionSpeedUp = nSteps + nPushes;
-	  
-	  // console.log('sp: ' + transitionSpeedUp)
-	  
-	  transitionsResponse = transitionsResponse
-	    .map((row) => ({
-	      ...row, 
-	      duration: row.durationDefault / transitionSpeedUp, 
-	      delay: row.delayDefault / transitionSpeedUp,
-	      speedUp: transitionSpeedUp,
-	      nthPush: nthPush
-	    }));
-	  
-	  nthPush++;
-	  
-	  transitionsResponse.forEach(function(transition) { transitionQueue.push(transition); });
-	  
-	  if (!isTransitioning) {
-	    runTransitionQueu();
-	  }
-	}
-}
-
-async function runTransitionQueuOriginal() {
-  let nTransition;
-  
-  isTransitioning = true;
-  
-  while (transitionQueue.length > 0) {
-    nTransition = transitionQueue.shift(); // get the next transition from the queue
-    
-    // console.warn("Add logic that checks if transitions can be removed from the queu because there is duplication of going up and down. Should that be here or where transitions are pushed up?");
-    
-    if (nTransition.nextOn === 'end') {
-      await nTransition.transitionFunction(transition = nTransition.transition, duration = nTransition.duration, delay = nTransition.delay, speedUp = nTransition.speedUp).end();
-    } else {
-      nTransition.transitionFunction(transition = nTransition.transition, duration = nTransition.duration, delay = nTransition.delay, speedUp = nTransition.speedUp);
-    }
-  }
-  
-  isTransitioning = false;
-}
 var figureHeight      = 0;
 
 function handleOrientationAndWidth() {
@@ -657,8 +569,8 @@ function handleResize() {
   .style("top", figureMarginTop + "px");
   
   svg
-    .attr("width", document.getElementById('figure1').clientWidth)
-    //.attr("height", document.getElementById('figure1').clientWidth);
+    .attr("width", document.getElementById('figure-nta').clientWidth)
+    //.attr("height", document.getElementById('figure-nta').clientWidth);
     .attr("height", figureHeight);
     
   // 3. tell scrollama to update new element dimensions
