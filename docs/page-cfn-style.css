@@ -1,3 +1,4 @@
+/* START FILE: d3-co2-fossil-national.css */
 
 #intro-cfn {
   height: 100vh;
@@ -61,36 +62,6 @@
   transform: translate3d(0, 0, 0);
   z-index: 0;
 }
-
-/*
-.step {
-  min-height:250px;
-  height: auto;
-  margin: auto;
-  padding: 0;
-  color: #3b3b3b; 
-}
-
-.step p {
-  text-align: left;
-  color:#444444;
-}
-
-.step-header {
-  font-size: 1.8rem;
-  font-weight: 500;
-  margin-bottom: 0;
-  padding-bottom: 0;
-}
-
-.step-header-hr {
-  margin-top: 0;
-  margin-bottom: 0px;
-  border: 2px solid;
-  border-radius: 1px;
-  padding: 0;
-}
-*/
 
 .consumption-area {
   z-index: -1; 
@@ -182,5 +153,4 @@
   text-decoration-color: #787878;
 }
 
-
-
+/* END FILE: d3-co2-fossil-national.css */
