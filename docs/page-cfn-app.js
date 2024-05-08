@@ -373,7 +373,7 @@ function init() {
 			step: "#scrolly-cfn #article-cfn .step",
 			progress: true,
 			//debug: true,
-			offset: 0.8,
+			offset: 0.5,
 		})
 		.onStepProgress(debouncedHandleStepProgress);
 }
