@@ -812,7 +812,7 @@ function init() {
 			step: "#scrolly-gw #d3-article-gw .step",
 			progress: true,
 			//debug: true,
-			offset: 0.35,
+			offset: 0.5,
 		})
 		.onStepProgress(handleStepProgress);
 }
