@@ -1,5 +1,5 @@
 const dataSettings = {
-  "headerTitleFontSize": "1.6px",
+  "headerTitleFontSize": "1.45px",
   "headerExpandFontSize": "2px",
   "titlesFontSize": "1.6px",
   "hcHeaderTitle": "Total historic emissions",
