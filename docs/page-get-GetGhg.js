@@ -3,7 +3,7 @@ class GetGhg {
     constructor(svg, data, config) {
         this.svg = svg;
         this.dataFull = data;
-        this.data = this.dataFull.slice(0, 20);
+        this.data = this.dataFull // .slice(0, 20);
         this.config = config;
         this.settings = this.config.settings;
         
@@ -211,7 +211,7 @@ class GetGhg {
                 //.text(this.settings.hcHeaderTitle + ' ' + this.settings.hcHeaderSymbol0)
                 .attr("x", this.settings.hcHeaderTitleX)
                 .attr("y", this.settings.hcHeaderExpandY)
-                .style("alignment-baseline", 'middle')
+                .style("alignment-baseline", 'baseline')
                 .style("text-anchor", (d) => 'middle')
                 .style("font-size", this.settings.headerTitleFontSize)
                 .on("click", () => this.hcExpand());
@@ -330,7 +330,7 @@ class GetGhg {
             //.text( this.settings[`${nameShort}HeaderTitle`])
             .attr("x", this.settings[`${nameShort}HeaderTitleX`])
             .attr("y", this.settings[`${nameShort}HeaderExpandY`])
-            .style("alignment-baseline", 'middle')
+            .style("alignment-baseline", 'baseline')
             .style("text-anchor", (d) => 'middle')
             .style("font-size", this.settings.headerTitleFontSize)
             .on("click", () => this[`${nameShort}Expand`]());;
@@ -441,7 +441,7 @@ class GetGhg {
             //.text( this.settings.leHeaderTitle)
             .attr("x", this.settings.leHeaderTitleX)
             .attr("y", this.settings.leHeaderExpandY)
-            .style("alignment-baseline", 'middle')
+            .style("alignment-baseline", 'baseline')
             .style("text-anchor", (d) => 'middle')
             .style("font-size", this.settings.headerTitleFontSize)
             .on("click", () => this.leExpand());
@@ -564,7 +564,7 @@ class GetGhg {
             //.text( this.settings[`${nameShort}HeaderTitle`])
             .attr("x", this.settings[`${nameShort}HeaderTitleX`])
             .attr("y", this.settings[`${nameShort}HeaderExpandY`])
-            .style("alignment-baseline", 'middle')
+            .style("alignment-baseline", 'baseline')
             .style("text-anchor", (d) => 'middle')
             .style("font-size", this.settings.headerTitleFontSize)
             .on("click", () => this[`${nameShort}Expand`]());
@@ -687,7 +687,7 @@ class GetGhg {
             .text( this.settings.pcHeaderTitle)
             .attr("x", this.settings.pcHeaderTitleX)
             .attr("y", this.settings.pcHeaderExpandY)
-            .style("alignment-baseline", 'middle')
+            .style("alignment-baseline", 'baseline')
             .style("text-anchor", (d) => 'middle')
             .style("font-size", this.settings.headerTitleFontSize);
         //    .on("click", () => this.pcExpand());
