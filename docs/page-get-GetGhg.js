@@ -263,7 +263,7 @@ class GetGhg {
         }
         
         // Define the gradient
-        this.defs = svg.append("defs");
+        this.defs = this.svg.append("defs");
         
         this.gradient = this.defs.append("linearGradient")
           .attr("id", "hcAreaOpacityGradient")
